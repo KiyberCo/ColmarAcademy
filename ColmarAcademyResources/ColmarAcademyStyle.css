@@ -1,8 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     background-color: aliceblue;
 }
 
@@ -11,6 +12,46 @@ header {
     height: 64px;
     width: calc(100% - 48px);
     border: 1px solid red;
+}
+
+.SiteLogo {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    width: auto;
+}
+
+
+.SiteLogo h1 {
+    font-size: 32px;
+}
+
+.SiteLogo h1.grey {
+    color: gray;
+}
+
+.SiteLogo h1.black {
+    color: rgb(31, 31, 31);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    float: right;
+    height: 100%;
+    width: auto;
+}
+
+nav ul {
+    height: auto;
+    width: 100%;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 8px;    
+    height: auto;
 }
 
 body {

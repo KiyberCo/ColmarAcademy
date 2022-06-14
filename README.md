@@ -1,2 +1,2 @@
 # ColmarAcademy
-Codecademy Project
+This is a Codecademy Project
