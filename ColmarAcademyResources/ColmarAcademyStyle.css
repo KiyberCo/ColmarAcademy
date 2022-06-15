@@ -42,7 +42,7 @@ button {
 
 button:hover {
     top: 2.5px;
-    left: 2.55px;
+    left: 2.5px;
     background-color:rgb(70, 70, 70);
     box-shadow: rgb(41, 41, 41) 5px 5px;
 }
@@ -117,10 +117,10 @@ body {
 section {
     display: flex;
     padding: 32px 24px;
+    height: auto;
 }
 
-.openingSection {
-    height: auto;
+#openingSection {
     width: calc(100% - 48px);
     background-color: rgb(196, 196, 196);
 }
@@ -159,7 +159,24 @@ section {
     width: 100%;
     font-size: 28px;
 }
-.secondSection {
-    height: auto;
+#secondSection {
     width: calc(100% - 48px);
+}
+
+.doesntHurt {
+    padding: 32px 0;
+}
+
+.doesntHurt h1,
+.doesntHurt p{
+    margin-bottom: 24px;
+}
+
+.reelContainer { /*Fix margins from previous container - seperate section 1 and 2 */
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid rgb(166, 166, 166);
+    border: 1px solid red;
 }
