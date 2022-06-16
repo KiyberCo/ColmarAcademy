@@ -8,6 +8,11 @@
     color: rgb(65, 65, 65);
 }
 
+a{
+    text-decoration: none;
+    color: rgb(0, 64, 255);
+}
+
 p {
     
     font-weight: 400;
@@ -25,6 +30,11 @@ h1 {
 h2 {
     font-weight: 600;
     font-size: 27px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 21px;
 }
 
 button {
@@ -45,6 +55,11 @@ button:hover {
     left: 2.5px;
     background-color:rgb(70, 70, 70);
     box-shadow: rgb(41, 41, 41) 5px 5px;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 header {
@@ -112,27 +127,27 @@ nav ul li {
 body {
     height: auto;
     width: 100%;
+    overflow-x: hidden;
 }
 
 section {
+    padding: 32px 0;
     display: flex;
-    padding: 32px 24px;
     height: auto;
+    width: 100%;
 }
 
 #openingSection {
-    width: calc(100% - 48px);
     background-color: rgb(196, 196, 196);
 }
 
 .sectionLeft {
+    padding-left: 24px;
     height: auto;
-    width: 60%;
+    width: calc(60% - 24px);
 }
 
 .sectionLeft img {
-    height: auto;
-    width: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
@@ -159,8 +174,10 @@ section {
     width: 100%;
     font-size: 28px;
 }
-#secondSection {
-    width: calc(100% - 48px);
+
+#secondSection .sectionRight {
+    padding: 0;
+    width: 40%;
 }
 
 .doesntHurt {
@@ -175,8 +192,50 @@ section {
 .reelContainer { /*Fix margins from previous container - seperate section 1 and 2 */
     display: flex;
     flex-flow: row wrap;
+    align-content: flex-start;
     width: 100%;
     height: 100%;
     border-left: 1px solid rgb(166, 166, 166);
-    border: 1px solid red;
+}
+
+.Reel {
+    flex: 1 0 100%;
+    display: flex;
+    margin: 0.5% 0 0.5%;
+    height: auto;
+    background-color: white;
+    border-top:  1px solid rgb(166, 166, 166);
+    border-bottom:  1px solid rgb(166, 166, 166);
+    transition: background-color 750ms ease-out 100ms;
+}
+
+.Reel:hover {
+    background-color: rgb(180, 180, 180);
+}
+
+.Reel .thumbnail {
+    flex: 1 0 calc(35% - 32px);
+    padding: 16px;
+    height: auto;
+}
+
+.Reel img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2.5%;
+}
+
+.Reel .description {
+    flex: 1 0 62%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding-left: 2.5%;
+}
+
+.Reel .description h3,
+.Reel .description h4,
+.Reel .description a{
+    padding: 8px 0;
 }
