@@ -259,16 +259,33 @@ section {
 .catagoryContainer {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: auto;
 }
 
 .catagory {
-    flex: 1 0 calc(26%);
+    flex: 1 0 26%;
+    align-self: stretch; /*Never knew this kept all flex-items same height - life saver */
     margin: 32px;
+    padding-bottom: auto;    
+    height: auto;
     background-color: white;
+    transition: flex 400ms ease-out 100ms;
+}
+
+.catagory:hover {
+    flex: 1 0 27%;
+}
+
+@media only screen and (max-width: 1150px) and (min-width:1000px){
+    .catagory {
+        flex: 1 0 28%;
+    }
+    .catagory:hover {
+        flex: 1 0 29%;
+    }
 }
 
 .catagory img{
