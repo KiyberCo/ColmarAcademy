@@ -72,6 +72,10 @@ img {
     height: auto;
 }
 
+img.Mobile {
+    display: none;
+}
+
 video {
     width: 100%;
     height: auto;
@@ -430,7 +434,51 @@ footer nav ul li{
         width: 100%;
         font-size: 28px;
     }
+
+    #secondSection{
+        padding: 16px;
+        width: calc(100% - 32px);
+    }
+
+    #secondSection .sectionLeft {
+        display: none;
+    }
+
+    #secondSection .sectionRight {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #Thesis {
+        flex-flow: row wrap;
+        padding: 32px 0;
+    }
+    
+    /* Created this to avoid the wrap effect messing with the layout of the left and right sections */
+    #Thesis .subSection .sectionLeft{
+        display: flex;
+    }
+    
+    .sectionLeft video {
+        border-radius: 0px;
+    }
+    
+    .reimagineUrban {
+        display: none;
+    }
+    
+    #Thesis .subSection .sectionRight {
+        display: none;
+    }
+
+    footer nav{
+        display: none;
+    }
 }
+
+
+/* -- / MOBILE ONLY SETTINGS \ -- */
 
 @media only screen and (max-width: 630px){
     .SiteLogo h1,
@@ -492,5 +540,121 @@ footer nav ul li{
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat; 
+    }
+
+    .sectionRight button{
+        margin: 24px auto 32px;
+        padding: 8px 0;
+        width: 100%;
+        font-size: 28px;
+    }
+
+    #secondSection{
+        padding: 16px;
+        width: calc(100% - 32px);
+    }
+
+    #secondSection .sectionLeft {
+        display: none;
+    }
+
+    #secondSection .sectionRight {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .reelContainer {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+    
+    .Reel {
+        display: block;
+        height: 400px;
+        border: none;
+    }
+    
+    .Reel .thumbnail {
+        width: 100%;
+        padding: 0;
+        height: auto;
+    }
+    
+    .Reel img.Mobile {
+        display: block;
+    }
+
+    .Reel img.Desktop {
+        display: none;
+    }
+    
+    .Reel .description {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-flow: column wrap;
+        padding-left: 16px;
+        width: calc(100% - 16px);
+    }
+    
+    .Reel .description h3,
+    .Reel .description h4,
+    .Reel .description a{
+        padding: 8px 16px;
+    }
+
+    #startLearning {
+        display: block;
+        padding: 32px 16px 26px;
+        width: calc(100% - 32px);
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        background-color: white;
+    }
+    
+    #startLearning h1 {
+        padding-bottom: 8px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .catagoryContainer {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 100%;
+        height: auto;
+    }
+    
+    .catagory {
+        flex: 1 0 calc(100% - 32px);
+        margin: 8px 0;
+        padding: 16px 16px 24px;  
+        height: auto;
+        background-color: rgb(210, 209, 209);
+    }
+    
+    .catagory:hover {
+        flex: 1 0 calc(100% - 32px);
+        background-color: rgb(181, 179, 179);
+    }
+    
+    .catagory img{
+        display: none;
+    }
+    
+    .catagory article{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .catagory article h4{
+        display: none;
     }
 }
